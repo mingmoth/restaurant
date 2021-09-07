@@ -4,7 +4,6 @@ A simple web application for restaurant collection
 ### Features
 - searching restaurants by title
 - check the information of restaurants
-- delete restaurants from collection
 
 ### Environment
 - git
