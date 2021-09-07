@@ -19,6 +19,7 @@
   </div>
 </div>
 
+{{#if restaurants}}
 <!-- restaurant list -->
 <div class="container mt-5">
   <div class="row">
@@ -49,3 +50,9 @@
     </div>
   </div>
 </div>
+
+{{else}}
+<div class="container mt-5">
+  <h3>使用"{{keyword}}"無搜尋結果</h3>
+</div>
+{{/if}}

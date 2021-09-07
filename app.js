@@ -22,14 +22,13 @@ app.get('/search', (req, res) => {
   const restaurants = restaurantList.results.filter(restaurant => {
     return restaurant.name.toLowerCase().includes(keyword.toLowerCase())
   })
+  console.log(restaurants)
   res.render('index', { restaurants: restaurants, keyword: keyword })
 })
 
 app.get('/restaurants/:restaurant_id', (req, res) => {
   const restaurant = restaurantList.results.filter(restaurant => restaurant.id == req.params.restaurant_id)
-  res.render('show', {
-    restaurant: restaurant[0]
-  })
+  res.render('show', { restaurant: restaurant[0] })
 })
 
 app.listen(port, () => {
