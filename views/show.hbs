@@ -1,6 +1,7 @@
 <h1 class="mb-1 restaurant-show-title">{{restaurant.name}}</h1>
 <div class="container">
   <div class="d-flex justify-content-end mb-3">
+    <a class="btn btn-secondary ml-2" href="/restaurants/{{restaurant._id}}/edit">編輯餐廳</a>
     <a class="btn btn-outline-secondary ml-2" href="/">回到主頁</a>
   </div>
   <div class="row">
@@ -33,7 +34,12 @@
         </span>
         {{restaurant.phone}}
       </p>
-
+      
+      <div class="row mb-1">
+        <label for="image" class="col-sm-3 col-form-label col-form-label-sm text-secondary">
+          <i class="fas fa-image pr-2 me-1"></i>描述：
+        </label>
+      </div>
       <p class="mb-5">
         {{restaurant.description}}
       </p>
