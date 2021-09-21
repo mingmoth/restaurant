@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "name": "名稱排序",
+      "name_en": "nameAsc"
+      
+    },
+    {
+      "name": "名稱倒序",
+      "name_en": "nameDesc"
+    },
+    {
+      "name": "評分排序",
+      "name_en": "rating"
+    }
+  ]
+}

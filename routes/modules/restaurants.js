@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
 // display detail page
 router.get('/:id', (req, res) => {
   const id = req.params.id
-  console.log(id)
+  // console.log(id)
   Restaurant.findById(id).lean()
     .then((restaurant) => {
       // console.log(restaurant)
