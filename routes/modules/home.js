@@ -11,7 +11,6 @@ const sortOption = {
 }
 
 router.get('/', (req, res) => {
-  
   Restaurant.find().lean().sort({ _id: 'asc' })
     .then(restaurants => res.render('index', { restaurants, options }))
     .catch(err => console.log(err))
@@ -19,17 +18,15 @@ router.get('/', (req, res) => {
 
 router.get('/search', (req, res) => {
   const sort = req.query.sort
-  const keyword = req.query.keyword  
-  
+  const keyword = req.query.keyword
   Restaurant.find().lean().sort(sortOption[sort])
     .then(restaurants => {
       restaurants = restaurants.filter(restaurant => {
         return restaurant.name.toLowerCase().includes(keyword.toLowerCase())
       })
-      return res.render('index', { restaurants, keyword, sort,options})
+      return res.render('index', { restaurants, keyword, sort, options })
     })
     .catch(err => console.log(err))
-
 })
 
 module.exports = router

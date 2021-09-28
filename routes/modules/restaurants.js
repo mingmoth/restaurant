@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 
-//display new page
+// display new page
 router.get('/new', (req, res) => {
   res.render('new')
 })
@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
     .catch(err => console.log(err))
 })
 
-//display edit page
+// display edit page
 router.get('/:id/edit', (req, res) => {
   const id = req.params.id
   Restaurant.findById(id).lean()
@@ -35,7 +35,7 @@ router.get('/:id/edit', (req, res) => {
     .catch(err => console.log(err))
 })
 
-//Save edit results
+// Save edit results
 router.put('/:id', (req, res) => {
   const id = req.params.id
   const { name, name_en, category, rating, location, google_map, phone, image, description } = req.body
@@ -56,7 +56,7 @@ router.put('/:id', (req, res) => {
     .catch(err => console.log(err))
 })
 
-//Delete restaurant
+// Delete restaurant
 router.delete('/:id', (req, res) => {
   const id = req.params.id
   Restaurant.findById(id)
