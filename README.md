@@ -24,8 +24,12 @@ cd restaurant
 ```
 npm install
 ```
-4. 啟動專案
+4. 部屬餐廳資料
+```
+npm run seed
+```
+5. 啟動專案
 ```
 npm run dev
 ```
-5. 使用瀏覽器開啟：http://localhost:3000 即可瀏覽本專案
+6. 使用瀏覽器開啟：http://localhost:3000 即可瀏覽本專案
