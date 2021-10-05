@@ -34,8 +34,12 @@
             <i class="fas fa-utensils pr-2 me-1"></i>類別：
           </label>
           <div class="col-sm-9">
-            <input type="text" class="form-control form-control-sm" placeholder="類別..." name="category" id="category"
-              value="{{restaurant.category}}">
+            <select name="category" id="category" style="width: 100%; border: 1px solid #ced4da; height: calc(1.5em + .5rem + 2px); font-size: .875rem; color: #495057;padding: .25rem .25rem;">
+              <option value="{{restaurant.category}}" selected disabled>{{restaurant.category}}</option>
+              {{#each categories}}
+              <option value="{{this.name}}">{{this.name}}</option>
+              {{/each}}
+            </select required>
           </div>
         </div>
 
