@@ -24,9 +24,12 @@ cd restaurant
 ```
 npm install
 ```
-4. 部屬餐廳資料
+4. 部屬餐廳與餐廳類別資料
 ```
-npm run seed
+npm run seedrestaurant
+```
+```
+npm run seedcategory
 ```
 5. 啟動專案
 ```
